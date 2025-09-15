@@ -3,12 +3,13 @@ var userInput = [];
 var level = 0;
 var started = false;
 
-$(document).keypress(function(){
-    if(!started){  
+$(document).on("keypress touchstart", function () {
+    if (!started) {
         gameD();
         started = true;
-    } 
+    }
 });
+
 
 $(".btn").click(function(){
     if (!started) return;
